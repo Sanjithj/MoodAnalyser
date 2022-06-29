@@ -7,8 +7,8 @@ class TestCase {
 
 	@Test
 	public void testHappy() {
-		MoodAnalyser moodAnalyser = new MoodAnalyser(null);
-		String mood= moodAnalyser.analyserMood();
+		MoodAnalyserException moodAnalyser = new MoodAnalyserException(null);
+		String mood= moodAnalyser.MoodAnalyserException();
 		Assert.assertEquals( "HAPPY", mood);
 		
 	}

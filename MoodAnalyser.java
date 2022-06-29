@@ -5,22 +5,24 @@ public class MoodAnalyser {
 	private String message;
 	
 	public MoodAnalyser(String message) {
-		this.message = message;
+		this.message =  message;
 	}
 	
-	public String analyserMood(String message) {
-		this.message = message;
-		return analyserMood();
-		
-	}
-	public String analyserMood() {
+	
+	public String analyserMood() throws MoodAnalyserException {
 		try {
 			if(message.contains("Sad"))
 				return "Sad";
 			else
 				return "Happy";
 		} catch (NullPointerException e) {
-			return "Happy";
+			throw new  MoodAnalyserException("Invalid Mood");
+			
 		}
+	}
+
+
+	public String MoodAnalyserException() {
+		return null;
 	}
 }
